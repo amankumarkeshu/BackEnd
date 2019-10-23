@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign Up | Pantheon'19</title>
+    <link rel="icon" href="./images/title.ico" type="image/icon type">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+    <link rel="stylesheet" href="./css/lib/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./css/signUp.css">
+
+    <!-- jQuery library -->
+    <script src="./js/lib/jquery-3.4.1.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="./js/lib/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="./js/lib/bootstrap.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+
+    <!-- Google Recaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="./css/preloader.css">
+</head>
+
+<body>
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="https://pantheonbit.com/images/bitLogo.png" alt="BIT Logo" width="50" height="50">
+                    </a>
+                    <div style="border-left: 2px solid white; height: 50px; margin-right: 10px"></div>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="https://pantheonbit.com/images/PantheonLogo.png" alt="Pantheon Logo" width="140" height="100">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style="color: black">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Navbar links -->
+                    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html"><strong>Home</strong></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="events.html"><strong>Events</strong></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html"><strong>Sign In</strong></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="form-container sign-in-container">
+                    <form action="#" onsubmit=event.preventDefault()>
+                        <h1 style="font-weight: bolder">Sign Up</h1>
+                        <div class="input-wrap">
+                            <div>
+                                <span>Email</span>
+                            </div>
+                            <div class="field-wrap" style="display: inline">
+                                <span class="fas fa-user"></span>
+                                <input type="email" id="email" />
+                            </div>
+                            <hr style="border: 1px solid black">
+                            <p id="sEmail" style="color : red">Email is required</p>
+                        </div>
+
+                        <div class="input-wrap">
+                            <div>
+                                <span>Password</span>
+                            </div>
+                            <div class="field-wrap" style="display: inline">
+                                <span class="fas fa-lock"></span>
+                                <input minlength="6" maxlength="15" type="password" id="password" />
+                            </div>
+                            <hr style="border: 1px solid black">
+                            <p id="sPassword" style="color : red">Password is required</p>
+                        </div>
+
+                        <div class="input-wrap">
+                            <div>
+                                <span>Confirm Password</span>
+                            </div>
+                            <div class="field-wrap" style="display: inline">
+                                <span class="fas fa-lock"></span>
+                                <input minlength="6" maxlength="15" type="password" id="confirmPassword" />
+                            </div>
+                            <hr style="border: 1px solid black">
+                            <p id="sCnfPassword" style="color : red">Confirm Password is required</p>
+                            <p id="sPasswordMatch" style="color : red">Confirm Password did not match</p>
+                        </div>
+
+                        <div class="input-wrap">
+                            <div class="g-recaptcha" data-sitekey="6LfTprIUAAAAAEWATbkWhGxOolQEZ2jRPzAFXKdB"></div>
+                            <p id="sCaptcha" style="color : red">Captcha is required</p>
+                        </div>
+                        <p id="errMsg" style="color: red;"></p>
+                        <button onclick="signupForm()" id="btnSignUp"><span>Sign Up&nbsp;</span><span class="rotator"></span></button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="row">
+                <div class="col-sm-12 footer-copyright">
+                    <img class="img-fluid" src="https://pantheonbit.com/images/pantheon.png" width="100" height="120" alt="" srcset="">
+                    <p>All rights reserved. &copy; Pantheon'19</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./js/lib/jquery-3.4.1.min.js"></script>
+    <script src='./js/signup.js'></script>
+    <script src="./js/preloader.js"></script>
+</body>
+
+</html>
