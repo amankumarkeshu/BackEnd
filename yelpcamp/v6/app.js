@@ -52,6 +52,7 @@ app.get("/", function(req, res) {
 });
 
 //INDEX ROUTE - show all campgrounds
+
 app.get("/campgrounds", function(req, res) {
     // Get all campgrounds from DB
     //console.log(req.user);
@@ -164,6 +165,7 @@ app.post("/campgrounds/:id/comments", function(req, res) {
 //======================================================
 //AUTH ROUTES
 //=======================================================
+
 app.get("/register", function(req, res) {
     res.render("register");
 

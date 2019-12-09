@@ -66,7 +66,7 @@ app.post("/campgrounds", function(req, res) {
         image: image,
         description: desc
     };
-    
+
     //create a new campground and save to db
     Campground.create(newCampground, function(err, newlyCreated) {
         if (err) {
